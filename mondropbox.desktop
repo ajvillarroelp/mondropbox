@@ -1,0 +1,36 @@
+[Desktop Entry]
+Name=Dropbox Monitor
+GenericName=Dropbox Monitor
+Comment=Dropbox Monitor
+Exec=perl /home/antonio/bin/mondropbox.pl 
+Terminal=false
+Type=Application
+Icon=dropbox
+Categories=Network;FileTransfer;
+StartupNotify=false
+X-Ayatana-Desktop-Shortcuts=Disable;Enable;Status;RestartDropbox;StopDropbox
+
+[Disable Shortcut Group]
+Name=Disable Monitor
+Exec=bash /home/antonio/.mondropbox/mondropbox_cmd.sh off
+TargetEnvironment=Unity
+
+[Enable Shortcut Group]
+Name=Enable Monitor
+Exec=bash /home/antonio/.mondropbox/mondropbox_cmd.sh on
+TargetEnvironment=Unity
+
+[Status Shortcut Group]
+Name=Query Dropbox status
+Exec=bash /home/antonio/.mondropbox/mondropbox_status.sh
+TargetEnvironment=Unity
+
+[RestartDropbox Shortcut Group]
+Name=Restart Dropbox
+Exec=bash /home/antonio/.mondropbox/mondropbox_restart.sh
+
+[StopDropbox Shortcut Group]
+Name=Shutdown Dropbox & Mon
+Exec=bash /home/antonio/.mondropbox/mondropbox_stop.sh
+TargetEnvironment=Unity
+
